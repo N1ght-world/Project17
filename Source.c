@@ -3,12 +3,17 @@
 #define D 2.54
 #define P 2,32166
 
+double x1, x2, y1_val, y2_val;
+double d, d1;
+int st();
+
 int main()
 {
 	setlocale(LC_CTYPE, "RUS");
 	st3();
 	st2();
 	st1();
+	st();
 }
 int st1()
 {
@@ -57,4 +62,26 @@ int st3()
 	printf("|%7d   |%7d   |%7d   |\n", a * b, a + b, a - b);
 	return 0;
 		
+}
+
+double x1, x2, y1_val, y2_val;
+double d, d1;
+
+int st()
+{
+	printf("Введите координату x1 первой точки: ");
+	scanf("%lf", &x1);
+	printf("Введите координату y1 первой точки: ");
+	scanf("%lf", &y1_val);
+
+	printf("Введите координату x2 второй точки: ");
+	scanf("%lf", &x2);
+	printf("Введите координату y2 второй точки: ");
+	scanf("%lf", &y2_val);
+
+	d = pow((x2 - x1), 2) + pow((y2_val - y1_val), 2);
+	d1 = sqrt(d);
+
+	printf("Расстояние между точками: %.2f\n", d1);
+	return 0;
 }
