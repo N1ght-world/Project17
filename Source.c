@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <locale.h>
 #define D 2.54
-#define P 2,32166
+#define P 2.32166
 
 double x1, x2, y1_val, y2_val;
 double d, d1;
