@@ -1,5 +1,7 @@
+#define  _CRT_SECURE_NO_DEPRECATE 
 #include <stdio.h>
 #include <locale.h>
+#include <math.h>
 #define D 2.54
 #define P 2.32166
 
@@ -18,6 +20,7 @@ int main()
 int st1()
 {
 	int num, num2;
+	
 	puts("Vvedite chislo");
 	scanf("%d", &num);
 	printf("Vivelo %d\n", num);
@@ -25,18 +28,21 @@ int st1()
 	puts("Vvedite chislo nomer 2");
 	scanf("%d", &num2);
 	printf("Vivelo %d\n", num2);
+	double rez = num2 / num;
+	double rez_2 = num2 % num;
 
 	printf("%d\n", num + num2);
 	printf("%d\n", num - num2);
 	printf("%d\n", num * num2);
-	printf("%d\n", num2 / num);
+	printf("%lf\n", rez);
+	printf("%lf\n", rez_2);
 	return 0;
 }
 
 int st2()
 {
 	int dym, pulg;
-	float result,res;
+	float result, res;
 	puts("Vvesti znachenie:");
 	scanf("%d", &dym);
 	scanf("%d", &pulg);
@@ -55,13 +61,13 @@ int st3()
 	puts("Vvedite chislo b\n");
 	scanf("%d", &b);
 	printf("__________________________________\n");
-	printf("|%7s   |%7s   |%7s   |\n", "a*b","a+b","a-b");
+	printf("|%7s   |%7s   |%7s   |\n", "a*b", "a+b", "a-b");
 	printf("__________________________________\n");
-	printf("|%5d*%-4d|%5d*%-4d|%5d*%-4d|\n",a,b,a,b,a,b);
+	printf("|%5d*%-4d|%5d*%-4d|%5d*%-4d|\n", a, b, a, b, a, b);
 	printf("__________________________________\n");
 	printf("|%7d   |%7d   |%7d   |\n", a * b, a + b, a - b);
 	return 0;
-		
+
 }
 
 double x1, x2, y1_val, y2_val;
